@@ -1,7 +1,6 @@
-The Book library allows users to manage books by
- adding, editing and deleting 
+Book library application developed in Java Swing using MVC design pattern.
 
-
+The Book library allows users to manage books by adding, editing and deleting 
 
 INSTRUCTIONS OF USE
 
@@ -31,7 +30,7 @@ Click on Add Book button and a windows will pop up.
 Select the type of book you want to add by choosing 
 a corresponding tab. e.g, for a Text Book, chose the Text
 Book tab. Fill in all the fields and the press the save button.
-Warning: add price without £ sign e.g, 30.99
+Warning: add price without Â£ sign e.g, 30.99
 Warning: add date in this format - February 29, 1990
 
 
@@ -39,7 +38,7 @@ Editing Book:
 Click on Edit Book button and a windows will pop up.
 Fill in all corresponding fields.
 Warning: add date in this format - February 29, 1990
-Warning: add price without £ sign e.g, 30.99
+Warning: add price without Â£ sign e.g, 30.99
 Click save when finished or cancel to leave window.
 
 Deleting Books:
