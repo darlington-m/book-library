@@ -98,7 +98,7 @@ public class JLibrary extends JFrame {
 	public JLibrary() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Book Libray App");
-		setSize(500, 300);
+		setSize(800, 600);
 
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -282,7 +282,7 @@ public class JLibrary extends JFrame {
 		});
 		scrollPane.setViewportView(list);
 		GridBagLayout gbl_rightPanel = new GridBagLayout();
-		gbl_rightPanel.columnWidths = new int[] { 65, 135, 0 };
+		gbl_rightPanel.columnWidths = new int[] { 139, 264, 0 };
 		gbl_rightPanel.rowHeights = new int[] { 0, 40, 4, 0, 0, 0, 0, 0, 0, 0,
 				0 };
 		gbl_rightPanel.columnWeights = new double[] { 0.0, 0.0,

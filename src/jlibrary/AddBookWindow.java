@@ -68,184 +68,11 @@ public class AddBookWindow extends JFrame {
 	public AddBookWindow(Library lib) {
 
 		tabbedPane = new JTabbedPane();
-		setSize(500, 300);
+		setSize(800, 600);
 		setContentPane(tabbedPane);
 		library = lib;
-
-		JPanel fictionPanel = new JPanel();
-		tabbedPane.addTab("Fiction Book", fictionPanel);
-		GridBagLayout gbl_fictionPanel = new GridBagLayout();
-		gbl_fictionPanel.columnWidths = new int[] { 0, 102, 256, 0, 0 };
-		gbl_fictionPanel.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-		gbl_fictionPanel.columnWeights = new double[] { 0.0, 0.0, 0.0, 0.0,
-				Double.MIN_VALUE };
-		gbl_fictionPanel.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0,
-				0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
-		fictionPanel.setLayout(gbl_fictionPanel);
-
-		JLabel lblTitle_1 = new JLabel("Title");
-		GridBagConstraints gbc_lblTitle_1 = new GridBagConstraints();
-		gbc_lblTitle_1.insets = new Insets(0, 0, 5, 5);
-		gbc_lblTitle_1.gridx = 1;
-		gbc_lblTitle_1.gridy = 1;
-		fictionPanel.add(lblTitle_1, gbc_lblTitle_1);
-
-		fictTitle = new JTextField();
-		GridBagConstraints gbc_fictTitle = new GridBagConstraints();
-		gbc_fictTitle.insets = new Insets(0, 0, 5, 5);
-		gbc_fictTitle.fill = GridBagConstraints.HORIZONTAL;
-		gbc_fictTitle.gridx = 2;
-		gbc_fictTitle.gridy = 1;
-		fictionPanel.add(fictTitle, gbc_fictTitle);
-		fictTitle.setColumns(10);
-
-		JLabel lblAuthor = new JLabel("Author");
-		GridBagConstraints gbc_lblAuthor = new GridBagConstraints();
-		gbc_lblAuthor.insets = new Insets(0, 0, 5, 5);
-		gbc_lblAuthor.gridx = 1;
-		gbc_lblAuthor.gridy = 2;
-		fictionPanel.add(lblAuthor, gbc_lblAuthor);
-
-		fictAuthor = new JTextField();
-		GridBagConstraints gbc_fictAuthor = new GridBagConstraints();
-		gbc_fictAuthor.anchor = GridBagConstraints.NORTH;
-		gbc_fictAuthor.insets = new Insets(0, 0, 5, 5);
-		gbc_fictAuthor.fill = GridBagConstraints.HORIZONTAL;
-		gbc_fictAuthor.gridx = 2;
-		gbc_fictAuthor.gridy = 2;
-		fictionPanel.add(fictAuthor, gbc_fictAuthor);
-		fictAuthor.setColumns(10);
-
-		JLabel lblPublisher = new JLabel("Publisher");
-		GridBagConstraints gbc_lblPublisher = new GridBagConstraints();
-		gbc_lblPublisher.insets = new Insets(0, 0, 5, 5);
-		gbc_lblPublisher.gridx = 1;
-		gbc_lblPublisher.gridy = 3;
-		fictionPanel.add(lblPublisher, gbc_lblPublisher);
-
-		fictPub = new JTextField();
-		GridBagConstraints gbc_fictPub = new GridBagConstraints();
-		gbc_fictPub.insets = new Insets(0, 0, 5, 5);
-		gbc_fictPub.fill = GridBagConstraints.HORIZONTAL;
-		gbc_fictPub.gridx = 2;
-		gbc_fictPub.gridy = 3;
-		fictionPanel.add(fictPub, gbc_fictPub);
-		fictPub.setColumns(10);
-
-		JLabel lblDateOfPub_1 = new JLabel("Date Of Pub");
-		GridBagConstraints gbc_lblDateOfPub_1 = new GridBagConstraints();
-		gbc_lblDateOfPub_1.insets = new Insets(0, 0, 5, 5);
-		gbc_lblDateOfPub_1.gridx = 1;
-		gbc_lblDateOfPub_1.gridy = 4;
-		fictionPanel.add(lblDateOfPub_1, gbc_lblDateOfPub_1);
-
-		fictDateOfPub = new JTextField();
-		GridBagConstraints gbc_fictDateOfPub = new GridBagConstraints();
-		gbc_fictDateOfPub.insets = new Insets(0, 0, 5, 5);
-		gbc_fictDateOfPub.fill = GridBagConstraints.HORIZONTAL;
-		gbc_fictDateOfPub.gridx = 2;
-		gbc_fictDateOfPub.gridy = 4;
-		fictionPanel.add(fictDateOfPub, gbc_fictDateOfPub);
-		fictDateOfPub.setColumns(10);
 		Date dateX = new Date();
 		String dateF = new SimpleDateFormat("MMMM d, Y").format(dateX);
-		fictDateOfPub.setText(dateF);
-
-		JLabel lblNewLabel_3 = new JLabel("Price");
-		GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
-		gbc_lblNewLabel_3.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_3.gridx = 1;
-		gbc_lblNewLabel_3.gridy = 5;
-		fictionPanel.add(lblNewLabel_3, gbc_lblNewLabel_3);
-
-		fictPrice = new JTextField();
-		GridBagConstraints gbc_fictPrice = new GridBagConstraints();
-		gbc_fictPrice.insets = new Insets(0, 0, 5, 5);
-		gbc_fictPrice.fill = GridBagConstraints.HORIZONTAL;
-		gbc_fictPrice.gridx = 2;
-		gbc_fictPrice.gridy = 5;
-		fictionPanel.add(fictPrice, gbc_fictPrice);
-		fictPrice.setColumns(10);
-
-		JLabel lblGenre = new JLabel("Genre");
-		GridBagConstraints gbc_lblGenre = new GridBagConstraints();
-		gbc_lblGenre.insets = new Insets(0, 0, 5, 5);
-		gbc_lblGenre.gridx = 1;
-		gbc_lblGenre.gridy = 6;
-		fictionPanel.add(lblGenre, gbc_lblGenre);
-
-		fictGenre = new JTextField();
-		GridBagConstraints gbc_fictGenre = new GridBagConstraints();
-		gbc_fictGenre.insets = new Insets(0, 0, 5, 5);
-		gbc_fictGenre.fill = GridBagConstraints.HORIZONTAL;
-		gbc_fictGenre.gridx = 2;
-		gbc_fictGenre.gridy = 6;
-		fictionPanel.add(fictGenre, gbc_fictGenre);
-		fictGenre.setColumns(10);
-
-		JButton btnNewButton = new JButton("Add Fiction Book");
-		btnNewButton.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent arg0) {
-
-				try {
-					String date = fictDateOfPub.getText();
-					DateFormat format = new SimpleDateFormat("MMM d, yyyy",
-							Locale.ENGLISH);
-					Date fDate = format.parse(date);
-					String price = fictPrice.getText();
-					double fPrice = Double.parseDouble(price);
-
-					String title = fictTitle.getText();
-					String author = fictAuthor.getText();
-					String publisher = fictPub.getText();
-					String genr = fictGenre.getText();
-
-					Book fict = new FictionalBook(title, author, publisher,
-							fDate, fPrice, genr);
-					library.addBook(fict);
-					JOptionPane.showMessageDialog(JLibrary,
-							"Book Added to Library!");
-					dispose();
-
-				} catch (NumberFormatException e) {
-
-					// TODO Auto-generated catch block
-					JOptionPane.showMessageDialog(JLibrary,
-							"Book Not Saved! \n Price Format Incorrect");
-					return;
-				} catch (ParseException e) {
-
-					JOptionPane.showMessageDialog(JLibrary,
-							"Book Not Saved! \n Date Format Incorrect");
-					return;
-				} catch (Exception e) {
-					JOptionPane.showMessageDialog(JLibrary,
-							"Opps, Something Went Wrong \n"
-							+ "Review Your Input");
-					return;
-				} 
-
-			}
-		});
-
-		JButton btnCancel = new JButton("Cancel");
-		btnCancel.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-
-				dispose();
-			}
-		});
-		GridBagConstraints gbc_btnCancel = new GridBagConstraints();
-		gbc_btnCancel.insets = new Insets(0, 0, 0, 5);
-		gbc_btnCancel.gridx = 1;
-		gbc_btnCancel.gridy = 8;
-		fictionPanel.add(btnCancel, gbc_btnCancel);
-		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
-		gbc_btnNewButton.insets = new Insets(0, 0, 0, 5);
-		gbc_btnNewButton.gridx = 2;
-		gbc_btnNewButton.gridy = 8;
-		fictionPanel.add(btnNewButton, gbc_btnNewButton);
 
 		JPanel historyPanel = new JPanel();
 		tabbedPane.addTab("History Book", historyPanel);
@@ -593,6 +420,178 @@ public class AddBookWindow extends JFrame {
 		gbc_btnAddTextBook.gridx = 2;
 		gbc_btnAddTextBook.gridy = 8;
 		textPanel.add(btnAddTextBook, gbc_btnAddTextBook);
+		
+				JPanel fictionPanel = new JPanel();
+				tabbedPane.addTab("Fiction Book", fictionPanel);
+				GridBagLayout gbl_fictionPanel = new GridBagLayout();
+				gbl_fictionPanel.columnWidths = new int[] { 126, 244, 363, 0 };
+				gbl_fictionPanel.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+				gbl_fictionPanel.columnWeights = new double[] { 0.0, 0.0, 0.0,
+						Double.MIN_VALUE };
+				gbl_fictionPanel.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0,
+						0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
+				fictionPanel.setLayout(gbl_fictionPanel);
+				
+						JLabel lblTitle_1 = new JLabel("Title");
+						GridBagConstraints gbc_lblTitle_1 = new GridBagConstraints();
+						gbc_lblTitle_1.insets = new Insets(0, 0, 5, 5);
+						gbc_lblTitle_1.gridx = 1;
+						gbc_lblTitle_1.gridy = 1;
+						fictionPanel.add(lblTitle_1, gbc_lblTitle_1);
+						
+								fictTitle = new JTextField();
+								GridBagConstraints gbc_fictTitle = new GridBagConstraints();
+								gbc_fictTitle.insets = new Insets(0, 0, 5, 0);
+								gbc_fictTitle.fill = GridBagConstraints.HORIZONTAL;
+								gbc_fictTitle.gridx = 2;
+								gbc_fictTitle.gridy = 1;
+								fictionPanel.add(fictTitle, gbc_fictTitle);
+								fictTitle.setColumns(10);
+								
+										JLabel lblAuthor = new JLabel("Author");
+										GridBagConstraints gbc_lblAuthor = new GridBagConstraints();
+										gbc_lblAuthor.insets = new Insets(0, 0, 5, 5);
+										gbc_lblAuthor.gridx = 1;
+										gbc_lblAuthor.gridy = 2;
+										fictionPanel.add(lblAuthor, gbc_lblAuthor);
+										
+												fictAuthor = new JTextField();
+												GridBagConstraints gbc_fictAuthor = new GridBagConstraints();
+												gbc_fictAuthor.anchor = GridBagConstraints.NORTH;
+												gbc_fictAuthor.insets = new Insets(0, 0, 5, 0);
+												gbc_fictAuthor.fill = GridBagConstraints.HORIZONTAL;
+												gbc_fictAuthor.gridx = 2;
+												gbc_fictAuthor.gridy = 2;
+												fictionPanel.add(fictAuthor, gbc_fictAuthor);
+												fictAuthor.setColumns(10);
+												
+														JLabel lblPublisher = new JLabel("Publisher");
+														GridBagConstraints gbc_lblPublisher = new GridBagConstraints();
+														gbc_lblPublisher.insets = new Insets(0, 0, 5, 5);
+														gbc_lblPublisher.gridx = 1;
+														gbc_lblPublisher.gridy = 3;
+														fictionPanel.add(lblPublisher, gbc_lblPublisher);
+														
+																fictPub = new JTextField();
+																GridBagConstraints gbc_fictPub = new GridBagConstraints();
+																gbc_fictPub.insets = new Insets(0, 0, 5, 0);
+																gbc_fictPub.fill = GridBagConstraints.HORIZONTAL;
+																gbc_fictPub.gridx = 2;
+																gbc_fictPub.gridy = 3;
+																fictionPanel.add(fictPub, gbc_fictPub);
+																fictPub.setColumns(10);
+																
+																		JLabel lblDateOfPub_1 = new JLabel("Date Of Pub");
+																		GridBagConstraints gbc_lblDateOfPub_1 = new GridBagConstraints();
+																		gbc_lblDateOfPub_1.insets = new Insets(0, 0, 5, 5);
+																		gbc_lblDateOfPub_1.gridx = 1;
+																		gbc_lblDateOfPub_1.gridy = 4;
+																		fictionPanel.add(lblDateOfPub_1, gbc_lblDateOfPub_1);
+																		
+																				fictDateOfPub = new JTextField();
+																				GridBagConstraints gbc_fictDateOfPub = new GridBagConstraints();
+																				gbc_fictDateOfPub.insets = new Insets(0, 0, 5, 0);
+																				gbc_fictDateOfPub.fill = GridBagConstraints.HORIZONTAL;
+																				gbc_fictDateOfPub.gridx = 2;
+																				gbc_fictDateOfPub.gridy = 4;
+																				fictionPanel.add(fictDateOfPub, gbc_fictDateOfPub);
+																				fictDateOfPub.setColumns(10);
+																				fictDateOfPub.setText(dateF);
+																				
+																						JLabel lblNewLabel_3 = new JLabel("Price");
+																						GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
+																						gbc_lblNewLabel_3.insets = new Insets(0, 0, 5, 5);
+																						gbc_lblNewLabel_3.gridx = 1;
+																						gbc_lblNewLabel_3.gridy = 5;
+																						fictionPanel.add(lblNewLabel_3, gbc_lblNewLabel_3);
+																						
+																								fictPrice = new JTextField();
+																								GridBagConstraints gbc_fictPrice = new GridBagConstraints();
+																								gbc_fictPrice.insets = new Insets(0, 0, 5, 0);
+																								gbc_fictPrice.fill = GridBagConstraints.HORIZONTAL;
+																								gbc_fictPrice.gridx = 2;
+																								gbc_fictPrice.gridy = 5;
+																								fictionPanel.add(fictPrice, gbc_fictPrice);
+																								fictPrice.setColumns(10);
+																								
+																										JLabel lblGenre = new JLabel("Genre");
+																										GridBagConstraints gbc_lblGenre = new GridBagConstraints();
+																										gbc_lblGenre.insets = new Insets(0, 0, 5, 5);
+																										gbc_lblGenre.gridx = 1;
+																										gbc_lblGenre.gridy = 6;
+																										fictionPanel.add(lblGenre, gbc_lblGenre);
+																										
+																												fictGenre = new JTextField();
+																												GridBagConstraints gbc_fictGenre = new GridBagConstraints();
+																												gbc_fictGenre.insets = new Insets(0, 0, 5, 0);
+																												gbc_fictGenre.fill = GridBagConstraints.HORIZONTAL;
+																												gbc_fictGenre.gridx = 2;
+																												gbc_fictGenre.gridy = 6;
+																												fictionPanel.add(fictGenre, gbc_fictGenre);
+																												fictGenre.setColumns(10);
+																												
+																														JButton btnNewButton = new JButton("Add Fiction Book");
+																														btnNewButton.addActionListener(new ActionListener() {
+
+																															public void actionPerformed(ActionEvent arg0) {
+
+																																try {
+																																	String date = fictDateOfPub.getText();
+																																	DateFormat format = new SimpleDateFormat("MMM d, yyyy",
+																																			Locale.ENGLISH);
+																																	Date fDate = format.parse(date);
+																																	String price = fictPrice.getText();
+																																	double fPrice = Double.parseDouble(price);
+
+																																	String title = fictTitle.getText();
+																																	String author = fictAuthor.getText();
+																																	String publisher = fictPub.getText();
+																																	String genr = fictGenre.getText();
+
+																																	Book fict = new FictionalBook(title, author, publisher,
+																																			fDate, fPrice, genr);
+																																	library.addBook(fict);
+																																	JOptionPane.showMessageDialog(JLibrary,
+																																			"Book Added to Library!");
+																																	dispose();
+
+																																} catch (NumberFormatException e) {
+
+																																	// TODO Auto-generated catch block
+																																	JOptionPane.showMessageDialog(JLibrary,
+																																			"Book Not Saved! \n Price Format Incorrect");
+																																	return;
+																																} catch (ParseException e) {
+
+																																	JOptionPane.showMessageDialog(JLibrary,
+																																			"Book Not Saved! \n Date Format Incorrect");
+																																	return;
+																																} catch (Exception e) {
+																																	JOptionPane.showMessageDialog(JLibrary,
+																																			"Opps, Something Went Wrong \n"
+																																			+ "Review Your Input");
+																																	return;
+																																} 
+
+																															}
+																														});
+																														
+																																JButton btnCancel = new JButton("Cancel");
+																																btnCancel.addActionListener(new ActionListener() {
+																																	public void actionPerformed(ActionEvent arg0) {
+
+																																		dispose();
+																																	}
+																																});
+																																GridBagConstraints gbc_btnCancel = new GridBagConstraints();
+																																gbc_btnCancel.insets = new Insets(0, 0, 0, 5);
+																																gbc_btnCancel.gridx = 1;
+																																gbc_btnCancel.gridy = 8;
+																																fictionPanel.add(btnCancel, gbc_btnCancel);
+																																GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
+																																gbc_btnNewButton.gridx = 2;
+																																gbc_btnNewButton.gridy = 8;
+																																fictionPanel.add(btnNewButton, gbc_btnNewButton);
 
 	}
 }

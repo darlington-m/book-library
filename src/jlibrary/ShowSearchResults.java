@@ -34,7 +34,7 @@ public class ShowSearchResults extends JFrame{
 		{
 			
 			setTitle( "Your Search Results" );
-			setSize(500, 300);
+			setSize(800, 600);
 			setBackground( Color.gray );
 			
 			topPanel = new JPanel();

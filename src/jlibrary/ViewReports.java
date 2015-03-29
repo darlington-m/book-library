@@ -54,7 +54,7 @@ public class ViewReports extends JDialog {
 		DefaultListModel<String> listModel = new DefaultListModel<String>();
 
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		setSize(500, 300);
+		setSize(800, 600);
 		getContentPane().setLayout(new GridLayout(0, 1, 0, 0));
 		tabbedPane.setMaximumSize(getSize());
 		getContentPane().add(tabbedPane);
@@ -201,7 +201,7 @@ public class ViewReports extends JDialog {
 		gbc_valueTotal.gridy = 6;
 		panel.add(valueTotal, gbc_valueTotal);
 		valueTotal.setColumns(10);
-		valueTotal.setText("£" + totalVF);
+		valueTotal.setText("ï¿½" + totalVF);
 
 		JPanel panel_1 = new JPanel();
 		tabbedPane.addTab("Publisher List", null, panel_1, null);

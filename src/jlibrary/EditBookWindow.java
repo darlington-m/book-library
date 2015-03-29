@@ -63,16 +63,16 @@ public class EditBookWindow extends JFrame {
 
 		setModalExclusionType(ModalExclusionType.APPLICATION_EXCLUDE);
 		JPanel panel = new JPanel();
-		setSize(500, 300);
+		setSize(800, 600);
 		panel.setMinimumSize(getSize());
 
 		getContentPane().add(panel, BorderLayout.CENTER);
 		GridBagLayout gbl_panel = new GridBagLayout();
-		gbl_panel.columnWidths = new int[] { 0, 102, 269, 0, 0 };
-		gbl_panel.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		gbl_panel.columnWidths = new int[] { 126, 244, 363, 100, 0 };
+		gbl_panel.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 		gbl_panel.columnWeights = new double[] { 0.0, 0.0, 0.0, 0.0,
 				Double.MIN_VALUE };
-		gbl_panel.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+		gbl_panel.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
 				0.0, 0.0, 0.0, Double.MIN_VALUE };
 		panel.setLayout(gbl_panel);
 
@@ -80,7 +80,7 @@ public class EditBookWindow extends JFrame {
 		GridBagConstraints gbc_lblTitle = new GridBagConstraints();
 		gbc_lblTitle.insets = new Insets(0, 0, 5, 5);
 		gbc_lblTitle.gridx = 1;
-		gbc_lblTitle.gridy = 1;
+		gbc_lblTitle.gridy = 3;
 		panel.add(lblTitle, gbc_lblTitle);
 
 		editTitle = new JTextField();
@@ -88,7 +88,7 @@ public class EditBookWindow extends JFrame {
 		gbc_editTitle.insets = new Insets(0, 0, 5, 5);
 		gbc_editTitle.fill = GridBagConstraints.HORIZONTAL;
 		gbc_editTitle.gridx = 2;
-		gbc_editTitle.gridy = 1;
+		gbc_editTitle.gridy = 3;
 		panel.add(editTitle, gbc_editTitle);
 		editTitle.setColumns(10);
 		editTitle.setText(book.getTitle());
@@ -97,7 +97,7 @@ public class EditBookWindow extends JFrame {
 		GridBagConstraints gbc_lblAuthor = new GridBagConstraints();
 		gbc_lblAuthor.insets = new Insets(0, 0, 5, 5);
 		gbc_lblAuthor.gridx = 1;
-		gbc_lblAuthor.gridy = 2;
+		gbc_lblAuthor.gridy = 4;
 		panel.add(lblAuthor, gbc_lblAuthor);
 
 		editAuthor = new JTextField();
@@ -105,7 +105,7 @@ public class EditBookWindow extends JFrame {
 		gbc_editAuthor.insets = new Insets(0, 0, 5, 5);
 		gbc_editAuthor.fill = GridBagConstraints.HORIZONTAL;
 		gbc_editAuthor.gridx = 2;
-		gbc_editAuthor.gridy = 2;
+		gbc_editAuthor.gridy = 4;
 		panel.add(editAuthor, gbc_editAuthor);
 		editAuthor.setColumns(10);
 		editAuthor.setText(book.getAuthor());
@@ -114,7 +114,7 @@ public class EditBookWindow extends JFrame {
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel.gridx = 1;
-		gbc_lblNewLabel.gridy = 3;
+		gbc_lblNewLabel.gridy = 5;
 		panel.add(lblNewLabel, gbc_lblNewLabel);
 
 		editPub = new JTextField();
@@ -123,7 +123,7 @@ public class EditBookWindow extends JFrame {
 		gbc_editPub.insets = new Insets(0, 0, 5, 5);
 		gbc_editPub.fill = GridBagConstraints.HORIZONTAL;
 		gbc_editPub.gridx = 2;
-		gbc_editPub.gridy = 3;
+		gbc_editPub.gridy = 5;
 		panel.add(editPub, gbc_editPub);
 		editPub.setColumns(10);
 		editPub.setText(book.getPublisher());
@@ -132,7 +132,7 @@ public class EditBookWindow extends JFrame {
 		GridBagConstraints gbc_lblDateOfPub = new GridBagConstraints();
 		gbc_lblDateOfPub.insets = new Insets(0, 0, 5, 5);
 		gbc_lblDateOfPub.gridx = 1;
-		gbc_lblDateOfPub.gridy = 4;
+		gbc_lblDateOfPub.gridy = 6;
 		panel.add(lblDateOfPub, gbc_lblDateOfPub);
 
 		editDate = new JTextField();
@@ -140,7 +140,7 @@ public class EditBookWindow extends JFrame {
 		gbc_editDate.insets = new Insets(0, 0, 5, 5);
 		gbc_editDate.fill = GridBagConstraints.HORIZONTAL;
 		gbc_editDate.gridx = 2;
-		gbc_editDate.gridy = 4;
+		gbc_editDate.gridy = 6;
 		panel.add(editDate, gbc_editDate);
 		editDate.setColumns(10);
 		editDate.setText(book.getPublicationDate());
@@ -149,7 +149,7 @@ public class EditBookWindow extends JFrame {
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
 		gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel_1.gridx = 1;
-		gbc_lblNewLabel_1.gridy = 5;
+		gbc_lblNewLabel_1.gridy = 7;
 		panel.add(lblNewLabel_1, gbc_lblNewLabel_1);
 
 		editPrice = new JTextField();
@@ -158,7 +158,7 @@ public class EditBookWindow extends JFrame {
 		gbc_editPrice.insets = new Insets(0, 0, 5, 5);
 		gbc_editPrice.fill = GridBagConstraints.HORIZONTAL;
 		gbc_editPrice.gridx = 2;
-		gbc_editPrice.gridy = 5;
+		gbc_editPrice.gridy = 7;
 		panel.add(editPrice, gbc_editPrice);
 		editPrice.setColumns(10);
 		String price = String.valueOf(book.getPrice());
@@ -169,7 +169,7 @@ public class EditBookWindow extends JFrame {
 		gbc_editOption.insets = new Insets(0, 0, 5, 5);
 		gbc_editOption.fill = GridBagConstraints.HORIZONTAL;
 		gbc_editOption.gridx = 2;
-		gbc_editOption.gridy = 6;
+		gbc_editOption.gridy = 8;
 		panel.add(editOption, gbc_editOption);
 		editOption.setColumns(10);
 		if (book instanceof TextBook) {
@@ -196,7 +196,7 @@ public class EditBookWindow extends JFrame {
 		GridBagConstraints gbc_btnCancel = new GridBagConstraints();
 		gbc_btnCancel.insets = new Insets(0, 0, 0, 5);
 		gbc_btnCancel.gridx = 1;
-		gbc_btnCancel.gridy = 8;
+		gbc_btnCancel.gridy = 10;
 		panel.add(btnCancel, gbc_btnCancel);
 
 		btnSaveBook = new JButton("Save Book");
@@ -242,7 +242,7 @@ public class EditBookWindow extends JFrame {
 		GridBagConstraints gbc_btnSaveBook = new GridBagConstraints();
 		gbc_btnSaveBook.insets = new Insets(0, 0, 0, 5);
 		gbc_btnSaveBook.gridx = 2;
-		gbc_btnSaveBook.gridy = 8;
+		gbc_btnSaveBook.gridy = 10;
 		panel.add(btnSaveBook, gbc_btnSaveBook);
 	}
 
